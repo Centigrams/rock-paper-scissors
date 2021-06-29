@@ -11,26 +11,6 @@ function playerPlay() {
     return playerPick.toLowerCase();
 }
 
-// function playRound(playerSelection, computerSelection) {
-
-//     if (playerSelection === computerSelection) {
-//         console.log("Tie!");
-//     } else if (
-//         (playerSelection === "rock" && computerSelection === "scissors") || 
-//         (playerSelection === "paper" && computerSelection === "rock") || 
-//         (playerSelection === "scissors" && computerSelection === "paper")
-//     ) {
-//         console.log(`You won, ${playerSelection} beats ${computerSelection}.`)
-//     } else if (
-//         (playerSelection === "scissors" && computerSelection === "rock") || 
-//         (playerSelection === "rock" && computerSelection === "paper") || 
-//         (playerSelection === "paper" && computerSelection === "scissors")
-//     ) {
-//         console.log(`You lost, ${playerSelection} beats ${computerSelection}.`)
-//     }
-// }
-
-// console.log(playRound(playerPlay(), computerPlay()));
 
 function game() {
 
