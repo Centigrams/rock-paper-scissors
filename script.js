@@ -37,6 +37,7 @@ function reset() {
 }
 
 function resetButtonActivate() {
+    let buttonMessage;
     if (playerScore === 5) {
         buttonMessage = 'Victory!'
     } else if (computerScore === 5) {
