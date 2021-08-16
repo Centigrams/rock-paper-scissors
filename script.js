@@ -3,7 +3,7 @@ let computerScore = 0;
 const message = document.querySelector('#message');
 const choices = document.querySelectorAll('.choice');
 
-function disableChoices() {
+const disableChoices = () => {
   /* The first version uses the value attribute of the buttons
     to pass the playerSelection parameter. Here, the alt attribute from
     the images can be used as a parameter. */
@@ -11,9 +11,9 @@ function disableChoices() {
     const playerChoice = choice;
     playerChoice.alt = null;
   });
-}
+};
 
-function enableChoices() {
+const enableChoices = () => {
   /* Since disableChoices() nulls the alt attribute, enableChoices()
     reverts the attribute to make the game restart. */
   choices.forEach((choice) => {
@@ -22,17 +22,17 @@ function enableChoices() {
     if (choice.id === 'paper') gameChoice.alt = 'paper';
     if (choice.id === 'scissors') gameChoice.alt = 'scissors';
   });
-}
+};
 
-function reset() {
+const reset = () => {
   playerScore = 0;
   computerScore = 0;
   document.getElementById('playerScore').textContent = playerScore;
   document.getElementById('computerScore').textContent = computerScore;
   enableChoices();
-}
+};
 
-function resetButtonActivate() {
+const resetButtonActivate = () => {
   let buttonMessage;
   if (playerScore === 5) {
     buttonMessage = 'Victory!';
@@ -44,14 +44,14 @@ function resetButtonActivate() {
   resetButton.textContent = `${buttonMessage} Click here to restart.`;
   message.appendChild(resetButton);
   resetButton.addEventListener('click', reset);
-}
+};
 
-function computerPlay() {
+const computerPlay = () => {
   const selection = ['rock', 'paper', 'scissors'];
   return selection[Math.floor(Math.random() * selection.length)];
-}
+};
 
-function playRound(playerSelection) {
+const playRound = (playerSelection) => {
   const computerSelection = computerPlay();
 
   if (playerSelection === computerSelection) {
@@ -83,7 +83,7 @@ function playRound(playerSelection) {
   }
   document.getElementById('playerScore').textContent = playerScore;
   document.getElementById('computerScore').textContent = computerScore;
-}
+};
 
 choices.forEach((choice) => {
   choice.addEventListener('click', () => {
