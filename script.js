@@ -73,7 +73,7 @@ const playRound = (playerSelection) => {
         || (playerSelection === 'rock' && computerSelection === 'paper')
         || (playerSelection === 'paper' && computerSelection === 'scissors')
   ) {
-    message.textContent = `You lost, ${playerSelection} beats ${computerSelection}.`;
+    message.textContent = `You lost, ${computerSelection} beats ${playerSelection}.`;
     computerScore += 1;
 
     if (computerScore === 5) {
